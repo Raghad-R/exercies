@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2/dist/css/bootstrap.css">
+ 
+    <title>Document</title>
+</head>
+
+<style>
+
+    body{
+        background-image:linear-gradient(rgb(148, 148, 233),rgb(153, 250, 216))
+         
+    }
+    *{
+        color: white;
+    }
+    img{
+        width: 150px;
+        height: 150px;
+    }
+
+.box1{
+    height:100px ;
+      
+}
+.box{
+height: 300px;
+background-color:rgba(152, 151, 151, 0.351);
+border-radius: 10px;
+}
+
+
+
+.box:last-child div:not(div:last-child){
+    border-right:1px solid white;
+}
+
+.cen{
+    text-align: center;
+}
+p{
+    font-size: 30px;
+}
+.flexboxsun{
+    display: flex;
+    justify-content: space-around;
+}
+</style>
+<body>
+    
+    <div class="container">
+        <div class="row box1 text-center mb-2 ">
+            <h2>Wether tamplate</h2>
+        </div>
+
+
+        <div class="row  mb-2 gap-4">
+            <div id="box-tody-tem" class="col box me-3">
+                <h3>Local wether Report</h3>
+                <hr>
+                <div class="flexboxsun">
+                <img src="Forecast/Cloud.png">
+                <div>
+                    <h4 id="h4-weth" style="display: inline-block;">Sunday</h4>
+                    <p id="p-weth">cloudy</p>
+                    <p id="p-weth-c">22ْ C</p>
+                    <p id="p-weth-f">71.6 ْF</p>
+                </div>
+            </div>
+            </div>
+            <div class="col box me-2  ">pp</div>
+        </div>
+
+
+        <div class="row  box">
+          
+            <div class="col cen ">
+                <h3>MONDAY</h3>
+                <img src="Forecast/Cloud.png">
+                <p>22ْ C</p>
+                <p>71.6 ْF</p>
+            </div>
+            <div class="col cen ">
+                <h3>TUESDAY</h3>
+                <img src="Forecast/Snow.png">
+                <p>22ْ C</p>
+                <p>71.6 ْF</p>
+
+            </div>
+            <div class="col cen">
+                <h3>WEDNESDAY</h3>
+                <img src="Forecast/SunCloud.png">
+                <p>22ْ C</p>
+                <p>71.6 ْF</p>
+
+            </div>
+            <div class="col cen">
+                <h3>THURSDAY</h3>
+                <img src="Forecast/RainThunder.png">
+                <p>22ْ C</p>
+                <p>71.6 ْF</p>
+
+            </div>
+            <div class="col cen">
+                <h3>FRIDAY</h3>
+                <img src="Forecast/rain.png">
+                <p>22ْ C</p>
+                <p>71.6 ْF</p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <script src="bootstrap-5.3.2/dist/js/bootstrap.js"></script>
+<script src="bootstrap-5.3.2/dist/js/bootstrap.bundle.js"></script>
+<script>
+let dic = [
+  {
+    dayName: "MONDAY",
+    img: "Forecast/Cloud.png",
+    tempdegree: "20°C",
+    oTempdegree: "73.6°F"
+  },
+  {
+    dayName: "TUESDAY",
+    img: "Forecast/Snow.png",
+    tempdegree: "21°C",
+    oTempdegree: "77.6°F"
+  },
+  {
+    dayName: "WEDNESDAY",
+    img: "Forecast/SunCloud.png",
+    tempdegree: "22°C",
+    oTempdegree: "71.6°F"
+  },
+  {
+    dayName: "THURSDAY",
+    img: "Forecast/RainThunder.png",
+    tempdegree: "22°C",
+    oTempdegree: "61.6°F"
+  },
+  {
+    dayName: "FRIDAY",
+    img: "Forecast/rain.png",
+    tempdegree: "21°C",
+    oTempdegree: "7.6°F"
+  }
+];
+
+function getRandomNumber(arr) {
+    var randomNumber = Math.floor(Math.random() * arr.length);
+    return randomNumber;
+
+}
+
+// let randomnum =getRandomNumber(dic);
+
+
+function instedRandom() {
+  var col = document.getElementById('box-tody-tem');
+  var randomNum = getRandomNumber(dic);
+  col.getElementsByTagName('img')[0].src = dic[randomNum].img;
+  document.getElementById('h4-weth').textContent = dic[randomNum].dayName;
+  document.getElementById('p-weth-c').textContent = dic[randomNum].tempdegree;
+  document.getElementById('p-weth-f').textContent = dic[randomNum].oTempdegree;
+}
+
+
+
+instedRandom();
+
+
+
+
+
+
+</script>
+</body>
+</html>
