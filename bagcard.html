@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="jquery-3.7.1.min.js"></script>
+   
+    <title>Document</title>
+</head>
+
+<style>
+#container{
+    position: relative;
+     
+}
+.div-bag{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: rgb(38, 39, 38);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.num{
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: #eaeaea;
+    position: absolute;
+}
+.num1{
+    top:48px ;
+    right: 18px;
+}
+.num2{
+    top:298px ;
+    right: 698px;
+}
+.trns{
+/* transform: translate(298px, 698px) ; */
+  animation: halfCircle 2s ease-in-out forwards;
+}
+
+@keyframes halfCircle {
+  from {
+    top:298px ;
+    right: 698px;
+ 
+   
+  }
+ 
+ to {
+    top:48px ;
+    right: 18px;
+  }
+}
+
+
+
+.div-Add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+    right: 700px;
+    height: 50px;
+    width: 150px;
+    background-color: rgb(90, 119, 143);
+    color: black;
+    border-radius: 20px;
+
+}
+</style>
+<body>
+   <div id="container">
+        <div class="div-bag"><i class='bx bx-basket' style='color:#eaeaea' ></i>
+        </div>
+        <div class="num num1"><span class="span-inc">4</span></div>
+        
+        <button class="div-Add"><span>Add in Card</span></button>
+        <div class="num num2"><span>1</span></div>
+
+   </div>
+<script>
+        let bag_num=4;
+        $(document).ready(function(){
+
+            $('button').click(function(){
+              
+                $('.num2').addClass('trns');
+                setTimeout(function() {
+                         bag_num += 1;
+                    $('.span-inc').html(bag_num);
+                    $('.num2').removeClass('trns');       
+                }, 2000); 
+
+           
+                // $('.num2').animate({
+                //     top:280,
+                //     right:660
+                // })
+                
+                // $('.num2').animate({
+                //     top:220,
+                //     right:580
+                // })
+                
+                // $('.num2').animate({
+                //     top:160,
+                //     right:550
+                // })
+                
+                // $('.num2').animate({
+                //     top:100,
+                //     right:500
+                // })
+                
+                // $('.num2').animate({
+                //     top:90,
+                //     right:480
+                // })
+                // $('.num2').animate({
+                //     top:80,
+                //     right:440
+                // })
+            })
+
+        })
+      
+
+</script>
+
+</body>
+</html>
