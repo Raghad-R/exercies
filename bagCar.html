@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="jquery-3.7.1.min.js"></script>
+
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25%;
+            height: 100%;
+            
+        }
+.container{
+    position: relative;
+    height: 60px;
+    width: 200px;
+    background-color: rgb(48, 48, 96);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+border: none;
+overflow: hidden;}
+span{
+    font-size: 20px;
+}
+i{
+    position: absolute;
+    left: 0;
+/* animation-name: tran;
+transition-duration: 3s;*/
+transition: 2s; 
+font-size: 30px;
+/* opacity: 0; */
+}
+ 
+/* .ani{
+    animation-name: tran;
+transition-duration: 3s;
+transition: 2s;
+} */
+
+/* @keyframes tran{
+
+    0%{
+        top: 2px;
+        left: 0;
+      
+
+    }
+    100%{
+       top: 2px;
+       right: 0;
+    }
+} */
+    </style>
+<body>
+    <button class="container">
+        <span>Add to card</span>
+        <i class='bx bxs-basket ani' ></i>
+    </button>
+
+        <script>
+             $(document).ready(function(){
+    $('.container').click(function(){
+        // var spanElement = 
+        // var iElement = ;
+        
+        $('span').animate(
+            {
+                opacity: 0
+            },
+            function() {
+                $('i').animate(
+                    {
+                        
+                        left: '100%'
+                    },
+                    function() {
+                        $('span').text('Added').animate({ opacity: 1 });
+                    }
+                );
+            }
+        );
+    });
+});
+        // setTimeout(function() {
+           
+        //     $('span').animate(
+        //     {
+               
+        //         opacity: 1
+        //     },   
+        //     $('span').text('Added');
+        // );
+          
+        //         }, 2000);
+      
+                    
+
+        
+//     });
+// })
+        </script>
+    </body>
+    
+
+    </html>

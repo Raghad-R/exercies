@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="chat-style.css">
+    <script src="jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+            <div class="info">
+                <img src="img/gethar.jpg">
+                <div>
+                    <p>Raghad</p>
+                    <p>Today at 2:06</p>
+                </div>
+              <button class="close-btn"> <i class="fa-solid fa-xmark close"></i></button> 
+            </div>
+            <div class="chat">
+                <div>
+                    
+                    Today at 10:00
+                </div>
+                <div class="black message">Hey, man what's up, Mr.Stark?👋</div>
+                <div class="white message">Kid where'd you come from?</div>
+                <div class="black message">feld up </div>
+                <div class="black message">uh, what is this guy's problem, Mr.stark</div>
+                <div class="white message">uh, he's from space , he came here to steale a necklece from a wizard</div>
+               
+            </div>
+            <div class="typing-div">
+                <i class="fa-solid fa-camera click"></i>
+                <i class="fa-regular fa-face-smile"></i>
+                <input type="text" placeholder="Write message!">
+                <i class="send fa-regular fa-paper-plane"></i>
+            </div>
+        </div>
+    </div>
+    <button class="div_icon_message">
+        <i class='bx bxs-message-rounded-dots' style='color:#4f4848' ></i>
+    </button>
+
+    <script>
+
+        $(document).ready(function(){
+      
+            $('.close-btn').click(function(){
+                $('.box').animate({
+                         width:0,
+                         height:0,
+                         bottom: '-10px',
+                        right: '-10px',
+                       opacity: 0
+                      })
+                      $('.div_icon_message').fadeIn();
+                    });
+              
+                
+            
+
+
+
+            $('.div_icon_message').click(function(){
+
+               
+               
+                     $('.box').animate({
+                         width:0,
+                         height:0,
+                         bottom: '-10px',
+                        right: '-10px',
+                       opacity: 0
+                      })
+                //   $('.box').animate({
+                //          width:50,
+                //          height:50
+                //       })
+                //       $('.box').animate({
+                //     width:100,
+                //     height:150,
+                //      })
+                //      $('.box').animate({
+                //     width:150,
+                //     height:320,
+                //  })
+                //  $('.box').animate({
+                //     width:200,
+                //     height:420,
+                // })
+                $('.box').animate({
+                    width:320,
+                     height:519,
+                     top: '50%',
+          right: '0.5%',
+          opacity: 1
+                     
+                      })
+                    //   $('i', this).hide();
+                    $('.div_icon_message').fadeOut();
+
+                    });
+            }
+        )
+    </script>
+    
+</body>
+</html>
